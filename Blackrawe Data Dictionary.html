@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="author" content="WB DataDic" />
+    <meta name="description" content="mydb Data Dictionary." />
+    <link rel="shortcut icon" type="image/x-icon" href="logo2.png">
+    <title>Blackrawe Data Dictionary</title>
+
+    <style type="text/css">
+        table {
+            width: 100%;
+            margin-bottom: 30px;
+            border-spacing: 0px;
+        }
+        
+        abbr {
+            cursor: help;
+        }
+        
+        table,
+        td,
+        th {
+            border-style: solid;
+            border-width: 1px;
+        }
+        
+        table caption {
+            font-size: 120%;
+            font-weight: bold;
+        }
+        
+        caption {
+            color: black;
+        }
+        
+        td,
+        th {
+            border-color: silver;
+        }
+        
+        tr:hover {
+            color: #333;
+            background-color: rgb(199, 158, 158);
+        }
+        
+        th {
+            background-color: silver;
+        }
+        
+        td {
+            color: #000;
+        }
+        
+        ul {
+            font-style: italic;
+        }
+        
+        #title-sect {
+            text-align: right;
+            background-image: url(logo2.png);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+        }
+        
+        .proj-desc {
+            text-align: right;
+        }
+        
+        img {
+            border-radius: 100%;
+            float: left;
+            height: 150px;
+            width: 150px;
+        }
+        
+        a {
+            text-decoration-color: slateblue;
+            font-size: 20px;
+            cursor: pointer;
+            font-family: sans-serif;
+        }
+        
+        a:hover {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="logo.png" alt="logo.png"> <br>
+    <div id="title-sect">
+        <h1>Blackrawedb<br> Data Dictionay</h1>
+        <p>
+            <em>2021-05-02</em>
+        </p>
+        <p class="proj-desc">
+            <em></em>
+        </p>
+    </div>
+    <h2>Alphabetic Index</h2>
+    <ul>
+        <li><a href='#tbl_actividades'>tbl_actividades</a></li>
+        <li><a href='#tbl_actividades_X_ciudad'>tbl_actividades_X_ciudad</a></li>
+        <li><a href='#tbl_ciudades'>tbl_ciudades</a></li>
+        <li><a href='#tbl_departamentos'>tbl_departamentos</a></li>
+        <li><a href='#tbl_permisos'>tbl_permisos</a></li>
+        <li><a href='#tbl_estado_inmueble'>tbl_estado_inmueble</a></li>
+        <li><a href='#tbl_estado_reservas'>tbl_estado_reservas</a></li>
+        <li><a href='#tbl_galerias'>tbl_galerias</a></li>
+        <li><a href='#tbl_inmuebles'>tbl_inmuebles</a></li>
+        <li><a href='#tbl_reservas'>tbl_reservas</a></li>
+        <li><a href='#tbl_roles'>tbl_roles</a></li>
+        <li><a href='#tbl_servicios_adicionales'>tbl_servicios_adicionales</a></li>
+        <li><a href='#tbl_servicios_x_inmueble'>tbl_servicios_x_inmueble</a></li>
+        <li><a href='#tbl_tipo_doc'>tbl_tipo_doc</a></li>
+        <li><a href='#tbl_tipo_inmueble'>tbl_tipo_inmueble</a></li>
+        <li><a href='#tbl_usuarios'>tbl_usuarios</a></li>
+    </ul>
+    <table id='tbl_actividades'>
+        <caption>tbl_actividades</caption>
+        <tr>
+            <td colspan='11'></td>
+        </tr>
+        <tr>
+            <th>Column name</th>
+            <th>DataType</th>
+            <th><abbr title='Primary Key'>PK</abbr></th>
+            <th><abbr title='Not Null'>NN</abbr></th>
+            <th><abbr title='Unique'>UQ</abbr></th>
+            <th><abbr title='Binary'>BIN</abbr></th>
+            <th><abbr title='Unsigned'>UN</abbr></th>
+            <th><abbr title='Zero Fill'>ZF</abbr></th>
+            <th><abbr title='Auto Increment'>AI</abbr></th>
+            <th>Default</th>
+            <th>Comment</th>
+        </tr>
+        <tr>
+            <td>id_actividad</td>
+            <td>INT(11)</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td></td>
+            <td>Llave primaria de la tabla</td>
+        </tr>
+        <tr>
+            <td>actividad</td>
+            <td>VARCHAR(45)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Nombre de la actividad </td>
+        </tr>
+        <tr>
+            <td>descripcion</td>
+            <td>VARCHAR(200)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Detalle de la actividad</td>
+        </tr>
+        <table id='tbl_actividades_X_ciudad'>
+            <caption>tbl_actividades_X_ciudad</caption>
+            <tr>
+                <td colspan='11'></td>
+            </tr>
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>id_ciudad</td>
+                <td>INT(11)</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>LLave primaria/foranea resultante de del rompimiento con la relacion a la tabla tbl_ciudades</td>
+            </tr>
+            <tr>
+                <td>id_actividad</td>
+                <td>INT(11)</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>LLave primaria/foranea resultante de del rompimiento con la relacion a la tabla tbl_actividades</td>
+            </tr>
+            <table id='tbl_ciudades'>
+                <caption>tbl_ciudades</caption>
+                <tr>
+                    <td colspan='11'></td>
+                </tr>
+                <tr>
+                    <th>Column name</th>
+                    <th>DataType</th>
+                    <th><abbr title='Primary Key'>PK</abbr></th>
+                    <th><abbr title='Not Null'>NN</abbr></th>
+                    <th><abbr title='Unique'>UQ</abbr></th>
+                    <th><abbr title='Binary'>BIN</abbr></th>
+                    <th><abbr title='Unsigned'>UN</abbr></th>
+                    <th><abbr title='Zero Fill'>ZF</abbr></th>
+                    <th><abbr title='Auto Increment'>AI</abbr></th>
+                    <th>Default</th>
+                    <th>Comment</th>
+                </tr>
+                <tr>
+                    <td>id_ciudad</td>
+                    <td>INT(11)</td>
+                    <td>&#10004;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td></td>
+                    <td>Llave primaria de la tabla</td>
+                </tr>
+                <tr>
+                    <td>codigo</td>
+                    <td>INT(11)</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td></td>
+                    <td>Codigo Dane</td>
+                </tr>
+                <tr>
+                    <td>ciudad</td>
+                    <td>VARCHAR(45)</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td></td>
+                    <td>Nombre de la ciudad</td>
+                </tr>
+                <tr>
+                    <td>id_departamento</td>
+                    <td>INT(11)</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td></td>
+                    <td>Llave foranea resultante de la relacion con la tabla tbl_departamentos</td>
+                </tr>
+                <table id='tbl_departamentos'>
+                    <caption>tbl_departamentos</caption>
+                    <tr>
+                        <td colspan='11'></td>
+                    </tr>
+                    <tr>
+                        <th>Column name</th>
+                        <th>DataType</th>
+                        <th><abbr title='Primary Key'>PK</abbr></th>
+                        <th><abbr title='Not Null'>NN</abbr></th>
+                        <th><abbr title='Unique'>UQ</abbr></th>
+                        <th><abbr title='Binary'>BIN</abbr></th>
+                        <th><abbr title='Unsigned'>UN</abbr></th>
+                        <th><abbr title='Zero Fill'>ZF</abbr></th>
+                        <th><abbr title='Auto Increment'>AI</abbr></th>
+                        <th>Default</th>
+                        <th>Comment</th>
+                    </tr>
+                    <tr>
+                        <td>id_departamento</td>
+                        <td>INT(11)</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td></td>
+                        <td>Llave primaria de la tabla</td>
+                    </tr>
+                    <tr>
+                        <td>codigo</td>
+                        <td>INT(11)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Codigo Dane</td>
+                    </tr>
+                    <tr>
+                        <td>departamento</td>
+                        <td>VARCHAR(50)</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>Nombre del departamento</td>
+                    </tr>
+                    <table id='tbl_permisos'>
+                        <caption>tbl_permisos</caption>
+                        <tr>
+                            <td colspan='11'></td>
+                        </tr>
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th>Default</th>
+                            <th>Comment</th>
+                        </tr>
+                        <tr>
+                            <td>id_permiso</td>
+                            <td>INT(11)</td>
+                            <td>&#10004;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td></td>
+                            <td>Llave primaria de la tabla</td>
+                        </tr>
+                        <tr>
+                            <td>id_usuario</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>LLave foranea resultante de la unión con la tabla usuario</td>
+                        </tr>
+                        <tr>
+                            <td>id_rol</td>
+                            <td>INT(11)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>LLave foranea resultante de la unión con la tabla roles</td>
+                        </tr>
+                        <tr>
+                            <td>enlace</td>
+                            <td>VARChAR(500))</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>Contiene el enlace para redireccionamiento de la vista, segun permiso</td>
+                        </tr>
+                        <table id='tbl_estado_inmueble'>
+                            <caption>tbl_estado_inmueble</caption>
+                            <tr>
+                                <td colspan='11'></td>
+                            </tr>
+                            <tr>
+                                <th>Column name</th>
+                                <th>DataType</th>
+                                <th><abbr title='Primary Key'>PK</abbr></th>
+                                <th><abbr title='Not Null'>NN</abbr></th>
+                                <th><abbr title='Unique'>UQ</abbr></th>
+                                <th><abbr title='Binary'>BIN</abbr></th>
+                                <th><abbr title='Unsigned'>UN</abbr></th>
+                                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                <th><abbr title='Auto Increment'>AI</abbr></th>
+                                <th>Default</th>
+                                <th>Comment</th>
+                            </tr>
+                            <tr>
+                                <td>id_estado_inmueble</td>
+                                <td>INT(11)</td>
+                                <td>&#10004;</td>
+                                <td>&#10004;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&#10004;</td>
+                                <td></td>
+                                <td>Llave primaria de la tabla</td>
+                            </tr>
+                            <tr>
+                                <td>estado</td>
+                                <td>VARCHAR(45)</td>
+                                <td>&nbsp;</td>
+                                <td>&#10004;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class='attr'>&nbsp;</td>
+                                <td></td>
+                                <td>Estado en el que se encuentra la propiedad</td>
+                            </tr>
+                            <table id='tbl_estado_reservas'>
+                                <caption>tbl_estado_reservas</caption>
+                                <tr>
+                                    <td colspan='11'></td>
+                                </tr>
+                                <tr>
+                                    <th>Column name</th>
+                                    <th>DataType</th>
+                                    <th><abbr title='Primary Key'>PK</abbr></th>
+                                    <th><abbr title='Not Null'>NN</abbr></th>
+                                    <th><abbr title='Unique'>UQ</abbr></th>
+                                    <th><abbr title='Binary'>BIN</abbr></th>
+                                    <th><abbr title='Unsigned'>UN</abbr></th>
+                                    <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                    <th><abbr title='Auto Increment'>AI</abbr></th>
+                                    <th>Default</th>
+                                    <th>Comment</th>
+                                </tr>
+                                <tr>
+                                    <td>id_estado_reserva</td>
+                                    <td>INT(11)</td>
+                                    <td>&#10004;</td>
+                                    <td>&#10004;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&#10004;</td>
+                                    <td></td>
+                                    <td>Llave primaria de la tabla</td>
+                                </tr>
+                                <tr>
+                                    <td>estado</td>
+                                    <td>VARCHAR(45)</td>
+                                    <td>&nbsp;</td>
+                                    <td>&#10004;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class='attr'>&nbsp;</td>
+                                    <td></td>
+                                    <td>Estado en el que se encuentra la reserva</td>
+                                </tr>
+                                <table id='tbl_galerias'>
+                                    <caption>tbl_galerias</caption>
+                                    <tr>
+                                        <td colspan='11'></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Column name</th>
+                                        <th>DataType</th>
+                                        <th><abbr title='Primary Key'>PK</abbr></th>
+                                        <th><abbr title='Not Null'>NN</abbr></th>
+                                        <th><abbr title='Unique'>UQ</abbr></th>
+                                        <th><abbr title='Binary'>BIN</abbr></th>
+                                        <th><abbr title='Unsigned'>UN</abbr></th>
+                                        <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                        <th><abbr title='Auto Increment'>AI</abbr></th>
+                                        <th>Default</th>
+                                        <th>Comment</th>
+                                    </tr>
+                                    <tr>
+                                        <td>id_galeria</td>
+                                        <td>INT(11)</td>
+                                        <td>&#10004;</td>
+                                        <td>&#10004;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&#10004;</td>
+                                        <td></td>
+                                        <td>Llave primaria de la tabla</td>
+                                    </tr>
+                                    <tr>
+                                        <td>descripcion</td>
+                                        <td>VARCHAR(100)</td>
+                                        <td>&nbsp;</td>
+                                        <td>&#10004;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td class='attr'>&nbsp;</td>
+                                        <td></td>
+                                        <td>descripcion de la imgen que sube el dueño del inmueble</td>
+                                    </tr>
+                                    <tr>
+                                        <td>imagen</td>
+                                        <td>BLOB</td>
+                                        <td>&nbsp;</td>
+                                        <td>&#10004;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td class='attr'>&nbsp;</td>
+                                        <td></td>
+                                        <td>Fotografia que sube el propietario del inmueble</td>
+                                    </tr>
+                                    <tr>
+                                        <td>id_inmueble</td>
+                                        <td>INT(11)</td>
+                                        <td>&nbsp;</td>
+                                        <td>&#10004;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td class='attr'>&nbsp;</td>
+                                        <td></td>
+                                        <td>Llave foranea resultante de la relacion con la tabla tbl_inmueble</td>
+                                    </tr>
+                                    <table id='tbl_inmuebles'>
+                                        <caption>tbl_inmuebles</caption>
+                                        <tr>
+                                            <td colspan='11'></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Column name</th>
+                                            <th>DataType</th>
+                                            <th><abbr title='Primary Key'>PK</abbr></th>
+                                            <th><abbr title='Not Null'>NN</abbr></th>
+                                            <th><abbr title='Unique'>UQ</abbr></th>
+                                            <th><abbr title='Binary'>BIN</abbr></th>
+                                            <th><abbr title='Unsigned'>UN</abbr></th>
+                                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                                            <th>Default</th>
+                                            <th>Comment</th>
+                                        </tr>
+                                        <tr>
+                                            <td>id_inmueble</td>
+                                            <td>INT(11)</td>
+                                            <td>&#10004;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td></td>
+                                            <td>Llave primaria de la tabla</td>
+                                        </tr>
+                                        <tr>
+                                            <td>nombre_in</td>
+                                            <td>VARCHAR(100)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Nombre del inmueble</td>
+                                        </tr>
+                                        <tr>
+                                            <td>propietario</td>
+                                            <td>VARCHAR(45)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Dueño o representante legal del inmueble</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ubicacion</td>
+                                            <td>VARCHAR(45)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Direccion del inmueble</td>
+                                        </tr>
+                                        <tr>
+                                            <td>costo</td>
+                                            <td>INT(11)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Valor del hospedaje por noche del inmueble</td>
+                                        </tr>
+                                        <tr>
+                                            <td>banos</td>
+                                            <td>INT(11)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Numero de baños con que cuenta el inmueble</td>
+                                        </tr>
+                                        <tr>
+                                            <td>plantas</td>
+                                            <td>INT(11)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Numero de pisos con que cuenta el inmueble</td>
+                                        </tr>
+                                        <tr>
+                                            <td>habitaciones</td>
+                                            <td>INT(11)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Numero de cuartos con que cuenta el inmueble</td>
+                                        </tr>
+                                        <tr>
+                                            <td>piscina</td>
+                                            <td>INT(11)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Numero de piscinas con las que cuenta el inmueble</td>
+                                        </tr>
+                                        <tr>
+                                            <td>balcon</td>
+                                            <td>INT(11)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Numero de balcones con que cuenta el inmueble</td>
+                                        </tr>
+                                        <tr>
+                                            <td>id_usuarios</td>
+                                            <td>INT(11)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Llave foranea resultante de la relacion con la tabla tbl_usuarios</td>
+                                        </tr>
+                                        <tr>
+                                            <td>id_tipo_inmueble</td>
+                                            <td>INT(11)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Llave foranea resultante de la relacion con la tabla tbl_tipo_inmueble</td>
+                                        </tr>
+                                        <tr>
+                                            <td>id_estado_inmueble</td>
+                                            <td>INT(11)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Llave foranea resultante de la relacion con la tabla tbl_estado_inmueble</td>
+                                        </tr>
+                                        <tr>
+                                            <td>id_ciudad</td>
+                                            <td>INT(11)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>Llave foranea resultante de la relacion con la tabla tbl_ciudades</td>
+                                        </tr>
+                                        <table id='tbl_reservas'>
+                                            <caption>tbl_reservas</caption>
+                                            <tr>
+                                                <td colspan='11'></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Column name</th>
+                                                <th>DataType</th>
+                                                <th><abbr title='Primary Key'>PK</abbr></th>
+                                                <th><abbr title='Not Null'>NN</abbr></th>
+                                                <th><abbr title='Unique'>UQ</abbr></th>
+                                                <th><abbr title='Binary'>BIN</abbr></th>
+                                                <th><abbr title='Unsigned'>UN</abbr></th>
+                                                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                                <th><abbr title='Auto Increment'>AI</abbr></th>
+                                                <th>Default</th>
+                                                <th>Comment</th>
+                                            </tr>
+                                            <tr>
+                                                <td>id_reserva</td>
+                                                <td>INT(11)</td>
+                                                <td>&#10004;</td>
+                                                <td>&#10004;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&#10004;</td>
+                                                <td></td>
+                                                <td>Llave primaria de la tabla reservas</td>
+                                            </tr>
+                                            <tr>
+                                                <td>fecha_inicio</td>
+                                                <td>VARCHAR(15)</td>
+                                                <td>&nbsp;</td>
+                                                <td>&#10004;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td class='attr'>&nbsp;</td>
+                                                <td></td>
+                                                <td>Fecha de inicio de la reserva</td>
+                                            </tr>
+                                            <tr>
+                                                <td>fecha_fin</td>
+                                                <td>VARCHAR(15)</td>
+                                                <td>&nbsp;</td>
+                                                <td>&#10004;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td class='attr'>&nbsp;</td>
+                                                <td></td>
+                                                <td>FEcha en que finaliza la reserva</td>
+                                            </tr>
+                                            <tr>
+                                                <td>fec_creacion</td>
+                                                <td>VARCHAR(15)</td>
+                                                <td>&nbsp;</td>
+                                                <td>&#10004;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td class='attr'>&nbsp;</td>
+                                                <td></td>
+                                                <td>Fecha en la que se crea la reserva</td>
+                                            </tr>
+                                            <tr>
+                                                <td>fec_actualizacion</td>
+                                                <td>VARCHAR(15)</td>
+                                                <td>&nbsp;</td>
+                                                <td>&#10004;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td class='attr'>&nbsp;</td>
+                                                <td></td>
+                                                <td>Si la reserva sufre cambios aqui se almacenan</td>
+                                            </tr>
+                                            <tr>
+                                                <td>valor</td>
+                                                <td>INT(15)</td>
+                                                <td>&nbsp;</td>
+                                                <td>&#10004;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td class='attr'>&nbsp;</td>
+                                                <td></td>
+                                                <td>Valor total de la reseserva</td>
+                                            </tr>
+                                            <tr>
+                                                <td>id_inmueble</td>
+                                                <td>INT(11)</td>
+                                                <td>&nbsp;</td>
+                                                <td>&#10004;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td class='attr'>&nbsp;</td>
+                                                <td></td>
+                                                <td>Llave foranea resultante de la relacion con la tabla tbl_inmuebles</td>
+                                            </tr>
+                                            <tr>
+                                                <td>id_usuario</td>
+                                                <td>INT(11)</td>
+                                                <td>&nbsp;</td>
+                                                <td>&#10004;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td class='attr'>&nbsp;</td>
+                                                <td></td>
+                                                <td>Llave foranea resultante de la relacion con la tabla tbl_usuarios</td>
+                                            </tr>
+                                            <tr>
+                                                <td>id_estado_reserva</td>
+                                                <td>INT(11)</td>
+                                                <td>&nbsp;</td>
+                                                <td>&#10004;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td class='attr'>&nbsp;</td>
+                                                <td></td>
+                                                <td>Llave foranea resultante de la relacion con la tabla tbl_estado_reserva</td>
+                                            </tr>
+                                            <table id='tbl_roles'>
+                                                <caption>tbl_roles</caption>
+                                                <tr>
+                                                    <td colspan='11'></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Column name</th>
+                                                    <th>DataType</th>
+                                                    <th><abbr title='Primary Key'>PK</abbr></th>
+                                                    <th><abbr title='Not Null'>NN</abbr></th>
+                                                    <th><abbr title='Unique'>UQ</abbr></th>
+                                                    <th><abbr title='Binary'>BIN</abbr></th>
+                                                    <th><abbr title='Unsigned'>UN</abbr></th>
+                                                    <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                                    <th><abbr title='Auto Increment'>AI</abbr></th>
+                                                    <th>Default</th>
+                                                    <th>Comment</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>id_rol</td>
+                                                    <td>INT(11)</td>
+                                                    <td>&#10004;</td>
+                                                    <td>&#10004;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&#10004;</td>
+                                                    <td></td>
+                                                    <td>Llave primaria de la tabla</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>rol</td>
+                                                    <td>VARCHAR(45)</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&#10004;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td class='attr'>&nbsp;</td>
+                                                    <td></td>
+                                                    <td>Tipo de rol que desempeñara cada tipo de usuario del sistema</td>
+                                                </tr>
+                                                <table id='tbl_servicios_adicionales'>
+                                                    <caption>tbl_servicios_adicionales</caption>
+                                                    <tr>
+                                                        <td colspan='11'></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Column name</th>
+                                                        <th>DataType</th>
+                                                        <th><abbr title='Primary Key'>PK</abbr></th>
+                                                        <th><abbr title='Not Null'>NN</abbr></th>
+                                                        <th><abbr title='Unique'>UQ</abbr></th>
+                                                        <th><abbr title='Binary'>BIN</abbr></th>
+                                                        <th><abbr title='Unsigned'>UN</abbr></th>
+                                                        <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                                        <th><abbr title='Auto Increment'>AI</abbr></th>
+                                                        <th>Default</th>
+                                                        <th>Comment</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>id_servicio</td>
+                                                        <td>INT(11)</td>
+                                                        <td>&#10004;</td>
+                                                        <td>&#10004;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&#10004;</td>
+                                                        <td></td>
+                                                        <td>Llave primaria de la tabla</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>servicio</td>
+                                                        <td>VARCHAR(45)</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&#10004;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td class='attr'>&nbsp;</td>
+                                                        <td></td>
+                                                        <td>Nombre del servicio que se presta</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>descripcion</td>
+                                                        <td>VARCHAR(200)</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&#10004;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td class='attr'>&nbsp;</td>
+                                                        <td></td>
+                                                        <td>Descripcion detallada del servicio prestado</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>valor</td>
+                                                        <td>INT(11)</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&#10004;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td class='attr'>&nbsp;</td>
+                                                        <td></td>
+                                                        <td>Costo del servicio prestado</td>
+                                                    </tr>
+                                                    <table id='tbl_servicios_x_inmueble'>
+                                                        <caption>tbl_servicios_x_inmueble</caption>
+                                                        <tr>
+                                                            <td colspan='11'></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Column name</th>
+                                                            <th>DataType</th>
+                                                            <th><abbr title='Primary Key'>PK</abbr></th>
+                                                            <th><abbr title='Not Null'>NN</abbr></th>
+                                                            <th><abbr title='Unique'>UQ</abbr></th>
+                                                            <th><abbr title='Binary'>BIN</abbr></th>
+                                                            <th><abbr title='Unsigned'>UN</abbr></th>
+                                                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                                                            <th>Default</th>
+                                                            <th>Comment</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>id_servicio</td>
+                                                            <td>INT(11)</td>
+                                                            <td>&#10004;</td>
+                                                            <td>&#10004;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td class='attr'>&nbsp;</td>
+                                                            <td></td>
+                                                            <td>LLave primaria/foranea resultante de del rompimiento con la relacion a la tabla tbl_servicios</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>id_inmueble</td>
+                                                            <td>INT(11)</td>
+                                                            <td>&#10004;</td>
+                                                            <td>&#10004;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td class='attr'>&nbsp;</td>
+                                                            <td></td>
+                                                            <td>LLave primaria/foranea resultante de del rompimiento con la relacion a la tabla tbl_inmueble</td>
+                                                        </tr>
+                                                        <table id='tbl_tipo_doc'>
+                                                            <caption>tbl_tipo_doc</caption>
+                                                            <tr>
+                                                                <td colspan='11'></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Column name</th>
+                                                                <th>DataType</th>
+                                                                <th><abbr title='Primary Key'>PK</abbr></th>
+                                                                <th><abbr title='Not Null'>NN</abbr></th>
+                                                                <th><abbr title='Unique'>UQ</abbr></th>
+                                                                <th><abbr title='Binary'>BIN</abbr></th>
+                                                                <th><abbr title='Unsigned'>UN</abbr></th>
+                                                                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                                                <th><abbr title='Auto Increment'>AI</abbr></th>
+                                                                <th>Default</th>
+                                                                <th>Comment</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>id_tipo</td>
+                                                                <td>INT(11)</td>
+                                                                <td>&#10004;</td>
+                                                                <td>&#10004;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&#10004;</td>
+                                                                <td></td>
+                                                                <td>Llave primaria de la tabla</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>tipo</td>
+                                                                <td>VARCHAR(10)</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&#10004;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td class='attr'>&nbsp;</td>
+                                                                <td></td>
+                                                                <td>Tipo de documento que debe tener cada usuario</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>descripcion</td>
+                                                                <td>VARCHAR(45)</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&#10004;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td class='attr'>&nbsp;</td>
+                                                                <td></td>
+                                                                <td>detalle del tipo de documento</td>
+                                                            </tr>
+                                                            <table id='tbl_tipo_inmueble'>
+                                                                <caption>tbl_tipo_inmueble</caption>
+                                                                <tr>
+                                                                    <td colspan='11'></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Column name</th>
+                                                                    <th>DataType</th>
+                                                                    <th><abbr title='Primary Key'>PK</abbr></th>
+                                                                    <th><abbr title='Not Null'>NN</abbr></th>
+                                                                    <th><abbr title='Unique'>UQ</abbr></th>
+                                                                    <th><abbr title='Binary'>BIN</abbr></th>
+                                                                    <th><abbr title='Unsigned'>UN</abbr></th>
+                                                                    <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                                                    <th><abbr title='Auto Increment'>AI</abbr></th>
+                                                                    <th>Default</th>
+                                                                    <th>Comment</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>id_tipo_inmueble</td>
+                                                                    <td>INT(11)</td>
+                                                                    <td>&#10004;</td>
+                                                                    <td>&#10004;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&#10004;</td>
+                                                                    <td></td>
+                                                                    <td>Llave primaria de la tabla</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>descripcion</td>
+                                                                    <td>VARCHAR(200)</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&#10004;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td class='attr'>&nbsp;</td>
+                                                                    <td></td>
+                                                                    <td>Descripcion de la categoria del inmueble</td>
+                                                                </tr>
+                                                                <table id='tbl_usuarios'>
+                                                                    <caption>tbl_usuarios</caption>
+                                                                    <tr>
+                                                                        <td colspan='11'></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Column name</th>
+                                                                        <th>DataType</th>
+                                                                        <th><abbr title='Primary Key'>PK</abbr></th>
+                                                                        <th><abbr title='Not Null'>NN</abbr></th>
+                                                                        <th><abbr title='Unique'>UQ</abbr></th>
+                                                                        <th><abbr title='Binary'>BIN</abbr></th>
+                                                                        <th><abbr title='Unsigned'>UN</abbr></th>
+                                                                        <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                                                        <th><abbr title='Auto Increment'>AI</abbr></th>
+                                                                        <th>Default</th>
+                                                                        <th>Comment</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>id_usuario</td>
+                                                                        <td>INT(11)</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td></td>
+                                                                        <td>Llave primaria de la tabla</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>identificacion</td>
+                                                                        <td>INT(11)</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td class='attr'>&nbsp;</td>
+                                                                        <td></td>
+                                                                        <td>Numero de identificacion del usuario</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>nombre</td>
+                                                                        <td>VARCHAR(45)</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td class='attr'>&nbsp;</td>
+                                                                        <td></td>
+                                                                        <td>Nombre del usuario</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>apellido</td>
+                                                                        <td>VARCHAR(45)</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td class='attr'>&nbsp;</td>
+                                                                        <td></td>
+                                                                        <td>Apellido del usuario</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>telefono</td>
+                                                                        <td>INT(11)</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td class='attr'>&nbsp;</td>
+                                                                        <td></td>
+                                                                        <td>Numero de contacto del usuario</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>correo</td>
+                                                                        <td>VARCHAR(100)</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td class='attr'>&nbsp;</td>
+                                                                        <td></td>
+                                                                        <td>Correo electronico del usuario indice unico de la tabla</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>password</td>
+                                                                        <td>VARCHAR(100)</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td class='attr'>&nbsp;</td>
+                                                                        <td></td>
+                                                                        <td>Contraseña de sesion del usuario</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>id_tipo</td>
+                                                                        <td>INT(11)</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&#10004;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td>&nbsp;</td>
+                                                                        <td class='attr'>&nbsp;</td>
+                                                                        <td></td>
+                                                                        <td>Llave foranea resultante de la relacion con la tabla tbl_tipo_doc</td>
+                                                                    </tr>
+                                                                </table>
+</body>
+
+</html>
